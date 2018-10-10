@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form name="f">
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" class='chatinput' onkeyUp="document.getElementById('printmsg').innerHTML = this.value" type="text"/>
+    <input type="button" name="clean" value="Effacer" onClick="document.forms.f.reset()">
+  </form>
+  <div class='printmsg' id='printmsg'></div>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>

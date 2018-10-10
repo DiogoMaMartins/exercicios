@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 5</title>
+  <style type="text/css">
+  	.img{
+  		display:none;
+  	}
+  	.img-active{
+  		display:block;
+  	}
+  	img{
+  		width:100px;
+  		height:100px;
+  	}
+  </style>
+</head>
+<body>
+	<img id="img1" src="" class="img img-active" onmouseover="MouseOver(this);" onmouseout="this.src='img/img1.jpeg'"/>
+	<img id="img2" src="" class="img" onmouseover="MouseOver(this);" onmouseout="this.src='img/img1.jpeg'">
+	<img id="img3" src="" class="img" onmouseover="MouseOver(this);" onmouseout="this.src='img/img1.jpeg'">
+	<img id="img4" src="" class="img" onmouseover="MouseOver(this);" onmouseout="this.src='img/img1.jpeg'">
+	<img id="img5" src="" class="img" onmouseover="MouseOver(this);" onmouseout="this.src='img/img1.jpeg'">
+	<script type="text/javascript">
+var img1=document.getElementById("img1").src="img/img1.jpeg";
+var img2=document.getElementById("img2").src="img/img2.png";
+var img3=document.getElementById("img3").src="img/img3.jpg";
+var img4=document.getElementById("img4").src="img/img4.png";
+var img5=document.getElementById("img5").src="img/img5.jpeg";
+var images= new Array('img1','img2','img3','img4','img5');
+contagem = 0;
+function MouseOver() {
+	while (contagem<4){
+ if (contagem==0) {
+ 	document.getElementById("img1").classList.remove("img-active");
+ 	document.getElementById("img2").classList.add("img-active");
+ 	contagem++;
+ }else if (contagem ==1){
+ 	document.getElementById("img2").classList.remove("img-active");
+ 	document.getElementById("img3").classList.add("img-active");
+ 	contagem++;
+ 	break;
+ }else if (contagem==2) {
+ 	document.getElementById("img3").classList.remove("img-active");
+ 	document.getElementById("img4").classList.add("img-active");
+ 	contagem++;
+ 	break;
+ }else if (contagem==3) {
+ 	document.getElementById("img4").classList.remove("img-active");
+ 	document.getElementById("img5").classList.add("img-active");
+ 	contagem++;
+ 	break;
+ }else if (contagem==4) {
+ 	document.getElementById("img5").classList.remove("img-active");
+ 	document.getElementById("img1").classList.add("img-active");
+ 	contagem++;
+ 	break;
+ }
+}
+}
+
+/*
+dont work
+function MouseOver() {
+	while (contagem<4){
+switch () {
+    case 0:
+        document.getElementById("img1").classList.remove("img-active");
+ 	    document.getElementById("img2").classList.add("img-active");
+        contagem=contagem+1;
+        break;
+    case 1:
+        document.getElementById("img2").classList.remove("img-active");
+ 	    document.getElementById("img3").classList.add("img-active");
+        contagem=contagem+1;
+        break;
+    case 2:
+        document.getElementById("img3").classList.remove("img-active");
+ 	    document.getElementById("img4").classList.add("img-active");
+        contagem=contagem+1;
+        break;
+    case 3:
+        document.getElementById("img4").classList.remove("img-active");
+ 	    document.getElementById("img5").classList.add("img-active");
+        contagem=contagem+1;
+        break;
+    case 4:
+        document.getElementById("img5").classList.remove("img-active");
+ 	    document.getElementById("img1").classList.add("img-active");
+        contagem=contagem+1;
+}
+}
+}
+function MouseOut() {
+  document.getElementById("img1").classList.add("img-active");
+  document.getElementById("img2").classList.remove("img-active");
+}*/
+
+	</script>
+</body>
+</html>
